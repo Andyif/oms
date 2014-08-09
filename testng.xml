@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestOMS" verbose="1" >
+    <test name="1" >
+        <classes>
+            <class name="com.oms.OMS">
+                <methods>
+                    <include name="omsLogin"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="2">
+        <groups>
+            <run>
+                <include name="localizationTesting"/>
+            </run>
+        </groups>
+    </test>
+    <test name="3">
+        <classes>
+            <class name="com.oms.OMS"/>
+        </classes>
+    </test>
+</suite>
